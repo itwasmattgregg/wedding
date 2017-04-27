@@ -1,0 +1,41 @@
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+
+### Environment ###
+.env
+
+### Misc ###
+*.bak
+composer.phar
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+.idea/
+### ctags for vim ###
+/tags
+
+### Node ###
+node_modules
+*.css.map
+
+### Bower ###
+bower_components

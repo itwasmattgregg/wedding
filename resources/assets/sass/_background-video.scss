@@ -1,0 +1,26 @@
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ 	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  	background-size: cover;
+  	transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+.video-overlay {
+	position: relative;
+	min-height: 100vh;
+	height: auto;
+	width: 100%;
+	min-width: 100%;
+	background-color: rbga(0,0,0,0.3);
+}

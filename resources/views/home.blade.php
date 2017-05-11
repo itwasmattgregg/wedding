@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="logo logo-absolute">
-
+	<img src="images/wedding-logo1.png" />
 </div>
 <div class="hero box-border-line">
 	<div class="content">

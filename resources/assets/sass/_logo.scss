@@ -1,0 +1,9 @@
+.logo.logo-absolute {
+	position: absolute;
+	left: 50%;
+	top: 45px;
+	transform: translateX(-50%);
+	img {
+		height: 300px;
+	}
+}

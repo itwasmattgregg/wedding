@@ -22,7 +22,7 @@
 </head>
 <body role="document" class="@yield('bodyClasses')">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
                 <div class="navbar-header">
 

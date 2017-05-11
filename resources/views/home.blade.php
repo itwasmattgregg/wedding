@@ -3,7 +3,18 @@
 @section('bodyClasses', 'home')
 
 @section('content')
-<div class="hero box-border-line">
-	<h1>Test</h1>
+<div class="logo logo-absolute">
+
 </div>
+<div class="hero box-border-line">
+	<div class="content">
+		<h1>The Wedding of <br>Matthew Gregg and <br>Rachel Wilder</h1>
+	</div>
+</div>
+<section class="information">
+
+</section>
+<section class="photo-gallery">
+
+</section>
 @endsection

@@ -20,3 +20,15 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+window.addEventListener('scroll', function() {
+	if(document.body.scrollTop <= 0) {
+		document.querySelector('.navbar .background').style.height = "0px";
+	}
+	if(document.body.scrollTop > 0 && document.body.scrollTop < 70){
+		document.querySelector('.navbar .background').classList.remove('open');
+		document.querySelector('.navbar .background').style.height = document.body.scrollTop + "px";
+	} if (document.body.scrollTop >= 70) {
+		document.querySelector('.navbar .background').classList.add('open');
+	}
+});

@@ -30,6 +30,7 @@
 <body role="document" class="@yield('bodyClasses')">
     <div id="app">
         <nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="background"></div>
             <div class="container">
                 <div class="navbar-header">
 
@@ -50,8 +51,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ route('login') }}">Login</a></li>
-						<li><a href="{{ route('register') }}">Register</a></li>
+                        <li><a href="{{ route('home') }}">Wedding Party</a></li>
+						<li><a href="{{ route('home') }}">Registry</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

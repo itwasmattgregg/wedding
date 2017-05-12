@@ -3,8 +3,28 @@
 	background-position: center right;
 	height: 100vh;
 	width: 100%;
+	&:before {
+		content: "";
+		position: absolute;
+		border: 3px solid #fff;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+	}
 	.home & {
 		background-image: url('/images/IMG_1903.jpg');
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background-size: cover;
+			background-position: center right;
+			background-image: url('/images/IMG_1903_front.png');
+		}
 	}
 	.content {
 		padding: 400px 120px 0;

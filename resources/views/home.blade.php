@@ -15,6 +15,27 @@
 
 </section>
 <section class="photo-gallery">
-
+	<div class="container">
+		<div class="grid">
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1321.jpg" />
+			</div>
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1349.jpg" />
+			</div>
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1356.jpg" />
+			</div>
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1360.jpg" />
+			</div>
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1374.jpg" />
+			</div>
+			<div class="grid-item">
+				<img class="img-responsive" src="/images/DSC_1380.jpg" />
+			</div>
+		</div>
+	</div>
 </section>
 @endsection

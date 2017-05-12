@@ -803,6 +803,18 @@ window.addEventListener('scroll', function () {
   }
 });
 
+var elem = document.querySelector('.grid');
+var msnry = new Masonry(elem, {
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 200,
+  gutter: 10
+});
+// layout Masonry after each image loads
+imagesLoaded(msnry, function () {
+  msnry.layout();
+});
+
 /***/ }),
 /* 9 */
 /***/ (function(module, exports) {

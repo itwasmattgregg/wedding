@@ -27,9 +27,14 @@
 		}
 	}
 	.content {
-		padding: 400px 120px 0;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 100px;
+		transform: translateY(-50%);
 		h1 {
 			color: white;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 		}
 	}
 }

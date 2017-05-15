@@ -37,8 +37,8 @@ var elem = document.querySelector('.grid');
 var msnry = new Masonry( elem, {
   // options
   itemSelector: '.grid-item',
-  columnWidth: 200,
-  gutter: 10
+  columnWidth: '.grid-item',
+  percentPosition: true
 });
 // layout Masonry after each image loads
 imagesLoaded( msnry, function() {

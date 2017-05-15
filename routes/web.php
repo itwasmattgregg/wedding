@@ -18,7 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/our-story', function () {
+    return view('our-story');
+})->name('our-story');
+Route::get('/registry', function () {
+    return view('registry');
+})->name('registry');
+Route::get('/wedding-party', function () {
+    return view('wedding-party');
+})->name('wedding-party');

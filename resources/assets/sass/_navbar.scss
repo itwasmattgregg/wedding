@@ -1,6 +1,7 @@
 .navbar {
 	border: none;
 	padding-bottom: 20px;
+	padding-top: 20px;
 	.background {
 		background: rgba(0,0,0,0.8);
 		position: absolute;
@@ -8,7 +9,7 @@
 		left: 0;
 		right: 0;
 		&.open {
-			height: 70px !important;
+			height: 90px !important;
 		}
 	}
 	a {

@@ -97,9 +97,9 @@
     </div>
 
     <!-- Scripts -->
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <script src="{{ asset('js/app.js') }}"></script>
+
+	@yield('page_scripts')
 </body>
 </html>

@@ -46,18 +46,5 @@ function checkNav() {
 
 window.addEventListener('scroll', checkNav);
 
-var elem = document.querySelector('.grid');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-item',
-  percentPosition: true
-});
-// layout Masonry after each image loads
-imagesLoaded( msnry, function() {
-	msnry.layout();
-} );
 
-window.sr = ScrollReveal();
-sr.reveal('.grid-item');
 

@@ -4,5 +4,32 @@
 .grid {
 	.grid-item {
 		width: 33.33%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			border: 1px solid #fff;
+			pointer-events: none;
+			opacity: 0;
+			-moz-transform: scale(1,1);
+			-ms-transform: scale(1,1);
+			-webkit-transform: scale(1,1);
+			transform: scale(1,1);
+			-moz-transition: all 0.1s ease-in-out;
+			-o-transition: all 0.1s ease-in-out;
+			-webkit-transition: all 0.1s ease-in-out;
+			transition: all 0.1s ease-in-out;
+		}
+		&:hover:before {
+			opacity: 1;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+		}
 	}
 }

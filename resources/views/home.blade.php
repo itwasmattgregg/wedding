@@ -5,7 +5,7 @@
 @section('content')
 <div class="logo">
 	<img src="images/logo2.png" />
-	<h2>10.07.18</h2>
+	<h2 class="header-white">10.07.18</h2>
 </div>
 <div class="hero box-border-line">
 	<div class="background-shader"></div>

@@ -3,12 +3,16 @@
 	padding: 20px 30px;
 	text-align: center;
 	position: absolute;
-	bottom: 0;
+	top: 320px;
 	width: 100%;
 	border-radius: 0;
 	opacity: 1;
 	z-index: 3;
 	transition: opacity 0.5s ease-in-out;
+	.home & {
+		top: auto;
+		bottom: 0;
+	}
 	&.scrolled-down {
 		position: fixed;
 		background-color: rgba(0,0,0,0.6);

@@ -135,16 +135,17 @@
 	var msnry = new Masonry( elem, {
 	// options
 	itemSelector: '.grid-item',
-	columnWidth: '.grid-item',
-	percentPosition: true
+	columnWidth: function( containerWidth ) {
+		return containerWidth /3;// depends how many boxes per row
+	}()
 	});
 	// layout Masonry after each image loads
-	imagesLoaded( msnry, function() {
+	imagesLoaded( elem, function() {
 		msnry.layout();
 	} );
 
-	//window.sr = ScrollReveal();
-	//sr.reveal('.grid-item');
+	window.sr = ScrollReveal();
+	sr.reveal('.grid-item');
 
 
 

@@ -10,6 +10,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
 	<meta name="theme-color" content="#ffffff">
 
     <!-- CSRF Token -->
@@ -18,6 +19,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+	<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
@@ -29,9 +31,8 @@
 </head>
 <body role="document" class="@yield('bodyClasses')">
     <div id="app">
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-			<div class="background"></div>
-            <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -53,14 +54,17 @@
                     <ul class="nav navbar-nav">
 						<li><a href="{{ route('home') }}">Home</a></li>
 						<li><a href="{{ route('our-story') }}">Our Story</a></li>
+						<li class="nav-logo">
+							<img src="/images/wedding-logo1.png" class="nav-logo" />
+						</li>
                         <li><a href="{{ route('wedding-party') }}">Wedding Party</a></li>
-						<li><a href="{{ route('registry') }}">Registry</a></li>
+						{{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    {{-- <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        {{-- @if (Auth::guest())
+                        @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
@@ -83,8 +87,8 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endif --}}
-                    </ul>
+                        @endif
+                    </ul> --}}
                 </div>
             </div>
         </nav>
@@ -95,6 +99,7 @@
     <!-- Scripts -->
 	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

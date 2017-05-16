@@ -21,17 +21,30 @@ const app = new Vue({
     el: '#app'
 });
 
-window.addEventListener('scroll', function() {
-	if(document.body.scrollTop <= 0) {
-		document.querySelector('.navbar .background').style.height = "0px";
+function checkNav() {
+	var nav = document.querySelector('.navbar');
+	if(document.body.scrollTop <= 70) {
+		if(nav.classList.contains('scrolled-down')){
+			nav.classList.add('transitioning');
+			window.setTimeout(function() {
+				nav.classList.remove('transitioning');
+				nav.classList.remove('scrolled-down');
+			}, 200);
+
+		}
 	}
-	if(document.body.scrollTop > 0 && document.body.scrollTop < 70){
-		document.querySelector('.navbar .background').classList.remove('open');
-		document.querySelector('.navbar .background').style.height = document.body.scrollTop + "px";
-	} if (document.body.scrollTop >= 70) {
-		document.querySelector('.navbar .background').classList.add('open');
+	if(document.body.scrollTop > 70){
+		if(!nav.classList.contains('scrolled-down')){
+			nav.classList.add('scrolled-down', 'transitioning');
+			window.setTimeout(function() {
+				nav.classList.remove('transitioning');
+			}, 200);
+		}
+
 	}
-});
+}
+
+window.addEventListener('scroll', checkNav);
 
 var elem = document.querySelector('.grid');
 var msnry = new Masonry( elem, {
@@ -43,5 +56,8 @@ var msnry = new Masonry( elem, {
 // layout Masonry after each image loads
 imagesLoaded( msnry, function() {
 	msnry.layout();
-} )
+} );
+
+window.sr = ScrollReveal();
+sr.reveal('.grid-item');
 

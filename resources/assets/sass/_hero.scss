@@ -11,6 +11,16 @@
 		left: 20px;
 		right: 20px;
 		bottom: 20px;
+		z-index: 2;
+	}
+	.background-shader {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.3);
+		z-index: 1;
 	}
 	.home & {
 		background-image: url('/images/IMG_1903.jpg');
@@ -21,6 +31,7 @@
 			bottom: 0px;
 			left: 0px;
 			right: 0px;
+			z-index: 2;
 			background-size: cover;
 			background-position: center right;
 			background-image: url('/images/IMG_1903_front.png');
@@ -28,7 +39,7 @@
 	}
 	.content {
 		position: absolute;
-		z-index: 1;
+		z-index: 3;
 		top: 50%;
 		left: 100px;
 		transform: translateY(-50%);

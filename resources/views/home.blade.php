@@ -130,6 +130,7 @@
 <script src="/js/photoswipe-ui-default.min.js"></script>
 
 <script>
+(function() {
 	var elem = document.querySelector('.grid');
 	var msnry = new Masonry( elem, {
 	// options
@@ -142,8 +143,8 @@
 		msnry.layout();
 	} );
 
-	window.sr = ScrollReveal();
-	sr.reveal('.grid-item');
+	//window.sr = ScrollReveal();
+	//sr.reveal('.grid-item');
 
 
 
@@ -346,6 +347,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.grid');
+
+})();
 
 </script>
 

@@ -20,7 +20,7 @@
 
     <!-- Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css', Request::secure()) }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -98,7 +98,7 @@
 
     <!-- Scripts -->
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js', Request::secure()) }}"></script>
 
 	@yield('page_scripts')
 </body>

@@ -12,9 +12,7 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .copy([
-	   'node_modules/photoswipe/dist/photoswipe.min.js',
-	   'node_modules/photoswipe/dist/photoswipe-ui-default.min.js'
-   ], 'public/js/')
+   .copy('node_modules/photoswipe/dist/photoswipe.min.js', 'public/js/photoswipe.min.js')
+   .copy('node_modules/photoswipe/dist/photoswipe-ui-default.min.js', 'public/js/photoswipe-ui-default.min.js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .browserSync('wedding.dev');

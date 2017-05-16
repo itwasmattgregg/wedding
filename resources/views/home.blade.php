@@ -126,8 +126,8 @@
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script src="/js/node_modules/photoswipe/dist/photoswipe.min.js"></script>
-<script src="/js/node_modules/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+<script src="/js/photoswipe.min.js"></script>
+<script src="/js/photoswipe-ui-default.min.js"></script>
 
 <script>
 	var elem = document.querySelector('.grid');

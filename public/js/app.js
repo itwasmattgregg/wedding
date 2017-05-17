@@ -793,7 +793,7 @@ var app = new Vue({
 
 function checkNav() {
 	var nav = document.querySelector('.navbar');
-	if (document.body.scrollTop <= 70) {
+	if (document.documentElement.scrollTop <= 70) {
 		if (nav.classList.contains('scrolled-down')) {
 			nav.classList.add('transitioning');
 			window.setTimeout(function () {
@@ -802,7 +802,7 @@ function checkNav() {
 			}, 200);
 		}
 	}
-	if (document.body.scrollTop > 70) {
+	if (document.documentElement.scrollTop > 70) {
 		if (!nav.classList.contains('scrolled-down')) {
 			nav.classList.add('scrolled-down', 'transitioning');
 			window.setTimeout(function () {

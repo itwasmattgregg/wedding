@@ -23,7 +23,7 @@ const app = new Vue({
 
 function checkNav() {
 	var nav = document.querySelector('.navbar');
-	if(document.documentElement.scrollTop <= 70) {
+	if(window.pageYOffset <= 70) {
 		if(nav.classList.contains('scrolled-down')){
 			nav.classList.add('transitioning');
 			window.setTimeout(function() {
@@ -33,7 +33,7 @@ function checkNav() {
 
 		}
 	}
-	if(document.documentElement.scrollTop > 70){
+	if(window.pageYOffset > 70){
 		if(!nav.classList.contains('scrolled-down')){
 			nav.classList.add('scrolled-down', 'transitioning');
 			window.setTimeout(function() {
@@ -44,7 +44,11 @@ function checkNav() {
 	}
 }
 
-window.addEventListener('scroll', checkNav);
+(function(){
+	checkNav();
+	window.addEventListener('scroll', checkNav);
+})();
+
 
 
 

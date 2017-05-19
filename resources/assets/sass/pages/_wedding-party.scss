@@ -1,3 +1,63 @@
 .wedding-party {
-
+	.titles {
+		margin: 0 35px 50px;
+		.title__groom {
+			color: $brand-primary;
+		}
+		.title__bride {
+			color: $brand-taupe;
+		}
+	}
+	.member {
+		position: relative;
+		height: 250px;
+		margin: 0 50px 20px 50px;
+		.member-img {
+			height: 250px;
+			width: 250px;
+			overflow: hidden;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 2;
+			img {
+				height: 250px;
+			}
+		}
+		.description {
+			width: 60%;
+			padding-top: 5px;
+			padding-bottom: 20px;
+			position: relative;
+			top: 60px;
+			border-radius: 3px;
+			h3 small {
+				color: $brand-ivory;
+			}
+		}
+		&.groom {
+			.member-img {
+				border: 3px solid $brand-primary;
+			}
+			.description {
+				margin-left: 200px;
+				padding-left: 80px;
+				background-color: $brand-primary;
+				color: #fff;
+			}
+		}
+		&.bride {
+			text-align: right;
+			.member-img {
+				right: 0;
+				border: 3px solid $brand-taupe;
+			}
+			.description {
+				margin-right: 200px;
+				padding-right: 80px;
+				margin-left: auto;
+				background-color: $brand-taupe;
+				color: #fff;
+			}
+		}
+	}
 }

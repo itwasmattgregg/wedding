@@ -6,20 +6,28 @@
 	@include('partials.header', ['title' => 'Wedding Party', 'background' => 'IMG_1764.jpg'])
 
 	<div class="container">
-		<div class="titles">
-			<h2 class="title__groom">#greggSide</h2>
-			<h2 class="title__bride">#wilderSide</h2>
+		<div class="titles row">
+			<h2 class="col-xs-6 title__groom">#greggSide</h2>
+			<h2 class="col-xs-6 title__bride text-right">#wilderSide</h2>
 		</div>
 		<div class="wedding-party-members">
 			<div class="member groom">
-				<img src="" />
+				<div class="member-img">
+					<img src="/images/rachel.gif" alt="Evan Larson" />
+				</div>
 				<div class="description">
 					<h3>Evan Larson <small>Best Man</small></h3>
 					<p>Best Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
-
+				<div class="member-img">
+					<img src="/images/rachel.gif" alt="Evan Larson" />
+				</div>
+				<div class="description">
+					<h3>Evan Larson <small>Best Man</small></h3>
+					<p>Best Friend of the Groom</p>
+				</div>
 			</div>
 		</div>
 	</div>

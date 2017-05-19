@@ -52,12 +52,19 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-						<li><a href="{{ route('home') }}">Home</a></li>
-						<li><a href="{{ route('our-story') }}">Our Story</a></li>
+
+						@if(Route::getCurrentRoute()->uri() != '/')
+							<li><a href="{{ route('home') }}">Home</a></li>
+						@endif
+						@if(Route::getCurrentRoute()->uri() != 'our-story')
+							<li><a href="{{ route('our-story') }}">Our Story</a></li>
+						@endif
 						<li class="nav-logo">
 							<img src="/images/wedding-logo1.png" class="nav-logo" />
 						</li>
-                        <li><a href="{{ route('wedding-party') }}">Wedding Party</a></li>
+						@if(Route::getCurrentRoute()->uri() != 'wedding-party')
+                        	<li><a href="{{ route('wedding-party') }}">Wedding Party</a></li>
+						@endif
 						{{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
                     </ul>
 

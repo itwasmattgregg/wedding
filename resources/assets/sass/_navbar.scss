@@ -15,7 +15,7 @@
 	}
 	&.scrolled-down {
 		position: fixed;
-		background-color: rgba(0,0,0,0.6);
+		background-color: $gray-darker;
 		opacity: 1;
 		bottom: 0;
 		top: auto;
@@ -27,7 +27,7 @@
 		}
 		.navbar-nav {
 			float: none;
-			text-align: center;
+			text-align: left;
 			> li {
 				@media(min-width: 768px) {
 					float: none;

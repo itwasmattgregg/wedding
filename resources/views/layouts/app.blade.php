@@ -55,9 +55,6 @@
 						@if(Route::getCurrentRoute()->uri() != 'our-story')
 							<li><a href="{{ route('our-story') }}">Our Story</a></li>
 						@endif
-						<li class="nav-logo">
-							<img src="/images/wedding-logo1.png" class="nav-logo" />
-						</li>
 						@if(Route::getCurrentRoute()->uri() != 'wedding-party')
                         	<li><a href="{{ route('wedding-party') }}">Wedding Party</a></li>
 						@endif

@@ -10,10 +10,10 @@
 				<div class="bride-and-groom-picture">
 					<img src="/images/DSC_1321.jpg" alt="Rachel and Matt" />
 				</div>
-				<div class="col-xs-6 description description__bride">
+				<div class="col-sm-6 description description__bride">
 					<h2>Rachel Teresa Wilder</h2>
 				</div>
-				<div class="col-xs-6 description description__groom">
+				<div class="col-sm-6 description description__groom">
 					<h2>Matthew Donald Gregg</h2>
 				</div>
 			</div>

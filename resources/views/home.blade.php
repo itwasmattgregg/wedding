@@ -14,9 +14,7 @@
 	<div class="container">
 		<h2 class="text-center">Information</h2>
 		<div>
-			<ul>
 
-			</ul>
 		</div>
 	</div>
 </section>

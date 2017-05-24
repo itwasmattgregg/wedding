@@ -1,6 +1,9 @@
 .wedding-party {
 	.titles {
-		margin: 0 50px 50px;
+		margin: 0 0 50px;
+        @media(min-width: $grid-float-breakpoint){
+            margin: 0 50px 50px;
+        }
 		.title__groom {
 			color: $brand-primary;
 		}
@@ -10,42 +13,72 @@
 	}
 	.member {
 		position: relative;
-		height: 250px;
-		margin: 0 50px 20px 50px;
+		height: 150px;
+		margin: 0 0px 20px;
+        @media(min-width: $grid-float-breakpoint){
+            margin: 0 50px 20px 50px;
+            height: 250px;
+        }
 		.member-img {
-			height: 250px;
-			width: 250px;
+			height: 150px;
+			width: 150px;
 			overflow: hidden;
 			border-radius: 50%;
 			position: absolute;
 			z-index: 2;
+            @media(min-width: $grid-float-breakpoint){
+                height: 250px;
+			    width: 250px;
+            }
+
 			img {
-				height: 250px;
+				height: 150px;
+                @media(min-width: $grid-float-breakpoint){
+                    height: 250px;
+                }
 				&.vertical-img {
 					height: auto;
-					width: 250px;
+					width: 150px;
+                    @media(min-width: $grid-float-breakpoint){
+                        width: 250px;
+                    }
 				}
 
 			}
 		}
 		.description {
-			width: 60%;
-			padding-top: 5px;
-			padding-bottom: 20px;
+			width: calc(100% - 100px);
+			padding-top: 15px;
+			padding-bottom: 15px;
 			position: relative;
-			top: 45px;
+			top: 50%;
+            transform: translateY(-50%);
 			border-radius: 3px;
+            @media(min-width: $grid-float-breakpoint){
+                width: 60%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
 			h3 {
 				padding-left: 1px;
-				font-size: 40px;
+				font-size: 25px;
+                margin: 0;
 				@extend .text-rose-gold;
+                @media(min-width: $grid-float-breakpoint){
+                    font-size: 40px;
+                }
 			}
 			h3 small {
-				font-size: 50%;
+				font-size: 55%;
+                display: inline-block;
 				@extend .text-rose-gold;
 			}
 			p {
+                margin: 0;
 				@extend .text-rose-gold;
+                @media(max-width: $grid-float-breakpoint-max){
+                    font-size: 14px;
+                }
 			}
 		}
 		&.groom {
@@ -53,10 +86,14 @@
 				border: 6px solid $brand-primary;
 			}
 			.description {
-				margin-left: 200px;
-				padding-left: 70px;
+				margin-left: 100px;
+				padding-left: 50px;
 				background-color: $brand-primary;
 				color: #fff;
+                @media(min-width: $grid-float-breakpoint){
+                    margin-left: 200px;
+                    padding-left: 70px;
+                }
 			}
 		}
 		&.bride {
@@ -66,11 +103,15 @@
 				border: 6px solid $brand-forrest;
 			}
 			.description {
-				margin-right: 200px;
-				padding-right: 70px;
+				margin-right: 100px;
+				padding-right: 50px;
 				margin-left: auto;
 				background-color: $brand-forrest;
 				color: #fff;
+                @media(min-width: $grid-float-breakpoint){
+                    margin-right: 200px;
+                    padding-right: 70px;
+                }
 			}
 		}
 	}

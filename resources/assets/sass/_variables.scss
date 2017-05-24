@@ -377,7 +377,7 @@ $navbar-default-bg:                none;
 $navbar-default-border:            none;
 
 // Navbar links
-$navbar-default-link-color:                #fff;
+$navbar-default-link-color:                $brand-ivory;
 $navbar-default-link-hover-color:          darken($navbar-default-link-color, 15%);
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $brand-taupe;

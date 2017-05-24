@@ -23,30 +23,34 @@ const app = new Vue({
 
 function checkNav() {
 	var nav = document.querySelector('.navbar');
-	if(window.pageYOffset <= 70) {
-		if(nav.classList.contains('scrolled-down')){
-			nav.classList.add('transitioning');
-			window.setTimeout(function() {
-				nav.classList.remove('transitioning');
-				nav.classList.remove('scrolled-down');
-			}, 200);
+    if(window.innerWidth < 768) {
+        nav.classList.add('scrolled-down');
+    } else {
+        if(window.pageYOffset <= 70) {
+            if(nav.classList.contains('scrolled-down')){
+                nav.classList.add('transitioning');
+                window.setTimeout(function() {
+                    nav.classList.remove('transitioning');
+                    nav.classList.remove('scrolled-down');
+                }, 200);
+            }
+        }
+        if(window.pageYOffset > 70){
+            if(!nav.classList.contains('scrolled-down')){
+                nav.classList.add('scrolled-down', 'transitioning');
+                window.setTimeout(function() {
+                    nav.classList.remove('transitioning');
+                }, 200);
+            }
+        }
+    }
 
-		}
-	}
-	if(window.pageYOffset > 70){
-		if(!nav.classList.contains('scrolled-down')){
-			nav.classList.add('scrolled-down', 'transitioning');
-			window.setTimeout(function() {
-				nav.classList.remove('transitioning');
-			}, 200);
-		}
-
-	}
 }
 
 (function(){
 	checkNav();
 	window.addEventListener('scroll', checkNav);
+    window.addEventListener('resize', checkNav);
 })();
 
 

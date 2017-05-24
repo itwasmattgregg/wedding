@@ -1,13 +1,16 @@
 .our-story {
     .bride-and-groom {
         position: relative;
-        height: 150px;
+        height: auto;
+        @media(min-width: $screen-sm) {
+            height: 150px;
+        }
         @media(min-width: $screen-md) {
             height: 300px;
         }
     }
     .bride-and-groom-picture{
-        position: absolute;
+        position: relative;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 50%;
@@ -15,6 +18,11 @@
         height: 150px;
         width: 150px;
         z-index: 2;
+        top: 30px;
+        @media(min-width: $screen-sm) {
+            top: 0;
+            position: absolute;
+        }
         @media(min-width: $screen-md) {
             height: 300px;
             width: 300px;
@@ -27,6 +35,8 @@
             bottom: 0;
             left: 0;
             right: 0;
+            height: 100%;
+            width: 100%;
             border-radius: 50%;
         }
         img {
@@ -36,39 +46,55 @@
             @media(min-width: $screen-md) {
                  height: 300px;
                  left: -87px;
-            }   
+            }
         }
     }
     .description {
         background-color: $brand-primary;
-        display: inline-block;
-        padding: 20px;
+        padding: 10px;
         vertical-align: top;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 3px;
+        text-align: center;
+        @media(min-width: $screen-sm) {
+            padding: 20px;
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 3px;
+            text-align: left;
+        }
         @media(min-width: $screen-md) {
             padding: 30px 30px;
         }
         h2 {
-            font-size: 25px;
+            font-size: 30px;
+            padding: 0 4px;
             // color: $brand-ivory;
             display: inline-block;
             @extend .text-rose-gold;
             margin: 0;
             @media(min-width: $screen-md) {
-                font-size: 36px;				
+                font-size: 36px;
             }
         }
     }
     .description__bride {
-        padding-right: 77px;
-
+        @media(max-width: $screen-xs-max){
+            padding-top: 40px;
+        }
+        @media(min-width: $screen-sm) {
+            padding-right: 77px;
+        }
     }
     .description__groom {
-        padding-left: 77px;
-        text-align: right;
+        @media(max-width: $screen-xs-max){
+            padding-top: 0;
+            padding-bottom: 20px;
+        }
+        @media(min-width: $screen-sm) {
+            padding-left: 77px;
+            text-align: right;
+        }
     }
     .story {
         @media(min-width: $screen-md) {

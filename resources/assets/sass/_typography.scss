@@ -6,6 +6,11 @@
 		url("fonts/weston/Weston_Free.svg#Weston-Free") format("svg");
 }
 
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .header-white {
 	color: white;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);

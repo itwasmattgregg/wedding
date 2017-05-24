@@ -12,7 +12,9 @@
 		height: auto;
 	}
 	@media(min-height: 820px) {
-		top: 50px;
+		@media (min-width: $grid-float-breakpoint){
+			top: 50px;
+		}
 		@media(min-width: $screen-md){
 			top: 150px;
 			img {

@@ -16,6 +16,11 @@ h2 {
 		font-size: 30px;
 	}
 }
+h3{
+	@media(max-width: $screen-sm-max) {
+		font-size: 24px;
+	}
+}
 
 .text-rose-gold {
 	background-image: linear-gradient(to right,#fff3de, #eec9b9, #d4ac98);

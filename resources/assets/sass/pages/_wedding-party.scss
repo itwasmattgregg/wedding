@@ -1,11 +1,11 @@
 .wedding-party {
 	.titles {
-		margin: 0 35px 50px;
+		margin: 0 50px 50px;
 		.title__groom {
 			color: $brand-primary;
 		}
 		.title__bride {
-			color: $brand-taupe;
+			color: $brand-forrest;
 		}
 	}
 	.member {
@@ -21,6 +21,11 @@
 			z-index: 2;
 			img {
 				height: 250px;
+				&.vertical-img {
+					height: auto;
+					width: 250px;
+				}
+
 			}
 		}
 		.description {
@@ -28,19 +33,28 @@
 			padding-top: 5px;
 			padding-bottom: 20px;
 			position: relative;
-			top: 60px;
+			top: 45px;
 			border-radius: 3px;
+			h3 {
+				padding-left: 1px;
+				font-size: 40px;
+				@extend .text-rose-gold;
+			}
 			h3 small {
-				color: $brand-ivory;
+				font-size: 50%;
+				@extend .text-rose-gold;
+			}
+			p {
+				@extend .text-rose-gold;
 			}
 		}
 		&.groom {
 			.member-img {
-				border: 3px solid $brand-primary;
+				border: 6px solid $brand-primary;
 			}
 			.description {
 				margin-left: 200px;
-				padding-left: 80px;
+				padding-left: 70px;
 				background-color: $brand-primary;
 				color: #fff;
 			}
@@ -49,13 +63,13 @@
 			text-align: right;
 			.member-img {
 				right: 0;
-				border: 3px solid $brand-taupe;
+				border: 6px solid $brand-forrest;
 			}
 			.description {
 				margin-right: 200px;
-				padding-right: 80px;
+				padding-right: 70px;
 				margin-left: auto;
-				background-color: $brand-taupe;
+				background-color: $brand-forrest;
 				color: #fff;
 			}
 		}

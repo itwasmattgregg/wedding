@@ -1,8 +1,12 @@
 .hero {
+	position: relative;
 	background-size: cover;
 	background-position: center right;
-	height: 100vh;
+	height: 500px;
 	width: 100%;
+	@media(min-width: $grid-float-breakpoint) {
+		height: 100vh;
+	}
 	&:before {
 		content: "";
 		position: absolute;
@@ -19,8 +23,11 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,0.5);
 		z-index: 1;
+		@media(min-width: $grid-float-breakpoint) {
+			background-color: rgba(0,0,0,0.3);
+		}
 	}
 	.home & {
 		background-image: url('/images/IMG_1903.jpg');
@@ -34,7 +41,10 @@
 			z-index: 2;
 			background-size: cover;
 			background-position: center right;
-			background-image: url('/images/IMG_1903_front.png');
+			
+			@media(min-width: $grid-float-breakpoint) {
+				background-image: url('/images/IMG_1903_front.png');
+			}
 		}
 	}
 	.content {

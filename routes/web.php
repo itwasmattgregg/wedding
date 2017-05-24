@@ -26,3 +26,6 @@ Route::get('/registry', function () {
 Route::get('/wedding-party', function () {
     return view('wedding-party');
 })->name('wedding-party');
+Route::get('/photos', function () {
+    return view('photos');
+})->name('photos');

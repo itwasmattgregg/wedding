@@ -5,6 +5,28 @@
 	background-size: cover;
 	position: relative;
 	margin-bottom: 50px;
+	&:before {
+		background-color: rgba(0,0,0,0.4);
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		border: 3px solid #fff;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		z-index: 2;
+	}
+	.photos & {
+		background-position: 50% 50%;
+	}
 	.wedding-party & {
 		background-position: 50% 40%;
 	}

@@ -9,7 +9,7 @@
 		<div class="grid" itemscope itemtype="http://schema.org/ImageGallery">
 
 			@php
-				$files = File::allFiles('images');
+				$files = File::files('images');
 				shuffle($files);
 			@endphp
 

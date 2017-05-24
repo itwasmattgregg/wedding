@@ -3,12 +3,13 @@
 	padding: 20px 30px;
 	text-align: center;
 	position: absolute;
-	top: 320px;
+	top: 310px;
 	width: 100%;
 	border-radius: 0;
 	opacity: 1;
 	z-index: 3;
 	transition: opacity 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
 	.home & {
 		top: auto;
 		bottom: 0;
@@ -33,6 +34,9 @@
 					float: none;
 					display: inline-block;
 				}
+				a {
+					font-weight: normal;
+				}
 			}
 		}
 		&.transitioning{
@@ -49,9 +53,16 @@
 			height: 60px;
 		}
 	}
+	.navbar-nav > li.active > a {
+		@extend .text-rose-gold;
+		font-weight: 600;
+		&:hover, &:focus, &:hover:focus {
+			@extend .text-rose-gold-hover;
+		}
+	}
 	a {
-		font-size: 22px;
-		font-weight: 200;
+		font-size: 20px;
+		font-weight: 600;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	}
 }

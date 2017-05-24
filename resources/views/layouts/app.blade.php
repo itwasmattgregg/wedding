@@ -49,16 +49,19 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
 
-						@if(Route::getCurrentRoute()->uri() != '/')
-							<li><a href="{{ route('home') }}">Home</a></li>
-						@endif
-						@if(Route::getCurrentRoute()->uri() != 'our-story')
-							<li><a href="{{ route('our-story') }}">Our Story</a></li>
-						@endif
-						@if(Route::getCurrentRoute()->uri() != 'wedding-party')
-                        	<li><a href="{{ route('wedding-party') }}">Wedding Party</a></li>
-						@endif
-						{{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
+                        <li class="{{ Request::path() == '/' ? 'active' : '' }}">
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li class="{{ Request::path() == 'our-story' ? 'active' : '' }}">
+                            <a href="{{ route('our-story') }}">Our Story</a>
+                        </li>
+                        <li class="{{ Request::path() == 'wedding-party' ? 'active' : '' }}">
+                            <a href="{{ route('wedding-party') }}">Wedding Party</a>
+                        </li>
+                        <li class="{{ Request::path() == 'photos' ? 'active' : '' }}">
+                            <a href="{{ route('photos') }}">Photos</a>
+                        </li>
+                    {{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
                     </ul>
 
                 </div>

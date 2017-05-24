@@ -7,8 +7,8 @@
 
 	<div class="container">
 		<div class="titles row">
-			<h2 class="col-xs-6 title__groom">#greggSide</h2>
-			<h2 class="col-xs-6 title__bride text-right">#wilderSide</h2>
+			<h2 class="col-xs-6 title__groom">#GreggSide</h2>
+			<h2 class="col-xs-6 title__bride text-right">#WilderSide</h2>
 		</div>
 		<div class="wedding-party-members">
 			<div class="member groom">

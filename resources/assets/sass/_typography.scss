@@ -6,6 +6,28 @@
 		url("fonts/weston/Weston_Free.svg#Weston-Free") format("svg");
 }
 
+h1 {
+	@media(max-width: $screen-sm-max) {
+		font-size: 50px;
+	}
+}
+h2 {
+	@media(max-width: $screen-sm-max) {
+		font-size: 30px;
+	}
+}
+
+.text-rose-gold {
+	background-image: linear-gradient(to right,#fff3de, #eec9b9, #d4ac98);
+	color: transparent;
+	-webkit-background-clip: text;
+	text-shadow: none;
+}
+.text-rose-gold-hover {
+	@extend .text-rose-gold;
+	background-image: linear-gradient(to right,darken(#fff3de, 10%), darken(#eec9b9, 10%), darken(#d4ac98, 10%));
+}
+
 .header-white {
 	color: white;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);

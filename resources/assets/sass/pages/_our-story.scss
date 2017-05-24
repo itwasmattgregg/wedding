@@ -1,46 +1,79 @@
 .our-story {
-	.bride-and-groom {
-		position: relative;
-    	height: 300px;
-	}
-	.bride-and-groom-picture{
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		border-radius: 50%;
-		overflow: hidden;
-		height: 300px;
-		width: 300px;
-		z-index: 2;
-		img {
-			height: 300px;
-			position: relative;
-			left: -87px;
-		}
-	}
-	.description {
-    	display: inline-block;
-		padding: 17px 40px 20px;
-		vertical-align: top;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		border-radius: 3px;
-		h2 {
-			font-size: 36px;
-			color: $brand-ivory;
-		}
-	}
-	.description__bride {
-		background-color: $brand-taupe;
+    .bride-and-groom {
+        position: relative;
+        height: 150px;
+        @media(min-width: $screen-md) {
+            height: 300px;
+        }
+    }
+    .bride-and-groom-picture{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        overflow: hidden;
+        height: 150px;
+        width: 150px;
+        z-index: 2;
+        @media(min-width: $screen-md) {
+            height: 300px;
+            width: 300px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            box-shadow: inset 0 0 10px -2px #000000;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 50%;
+        }
+        img {
+            height: 150px;
+            position: relative;
+            left: -43px;
+            @media(min-width: $screen-md) {
+                 height: 300px;
+                 left: -87px;
+            }   
+        }
+    }
+    .description {
+        background-color: $brand-primary;
+        display: inline-block;
+        padding: 20px;
+        vertical-align: top;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 3px;
+        @media(min-width: $screen-md) {
+            padding: 30px 30px;
+        }
+        h2 {
+            font-size: 25px;
+            // color: $brand-ivory;
+            display: inline-block;
+            @extend .text-rose-gold;
+            margin: 0;
+            @media(min-width: $screen-md) {
+                font-size: 36px;				
+            }
+        }
+    }
+    .description__bride {
+        padding-right: 77px;
 
-	}
-	.description__groom {
-		background-color: $brand-taupe;
-		text-align: right;
-	}
-	.story {
-		width: 70%;
-		margin: 0 auto;
-	}
+    }
+    .description__groom {
+        padding-left: 77px;
+        text-align: right;
+    }
+    .story {
+        @media(min-width: $screen-md) {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
 }

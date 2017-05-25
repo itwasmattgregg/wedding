@@ -124,7 +124,9 @@
 	});
 	// layout Masonry after each image loads
 	imagesLoaded( elem, function(imgLoad) {
-		msnry.layout();
+		setTimeout(function(){
+            msnry.layout();
+        }, 100);
 	} );
 
 

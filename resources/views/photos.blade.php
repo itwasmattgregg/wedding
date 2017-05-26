@@ -124,9 +124,11 @@
 	});
 	// layout Masonry after each image loads
 	imagesLoaded( elem, function(imgLoad) {
-		setTimeout(function(){
-            msnry.layout();
-        }, 100);
+        // Scroll reveal plugin init
+        window.sr = ScrollReveal();
+        sr.reveal('.grid-item');
+
+        msnry.layout();
 	} );
 
 
@@ -332,9 +334,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('.grid');
 
 
-// Scroll reveal plugin init
-window.sr = ScrollReveal();
-sr.reveal('.grid-item');
+
 
 })();
 

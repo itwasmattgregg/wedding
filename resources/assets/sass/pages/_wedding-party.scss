@@ -1,8 +1,16 @@
 .wedding-party {
 	.titles {
 		margin: 0 0 50px;
+        padding: 0;
         @media(min-width: $grid-float-breakpoint){
             margin: 0 50px 50px;
+        }
+        h2 {
+            @media(max-width: $screen-xs-max){
+                font-size: 35px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
         }
 		.title__groom {
 			color: $brand-primary;
@@ -47,7 +55,7 @@
 			}
 		}
 		.description {
-			width: calc(95% - 100px);
+			width: calc(100% - 100px);
 			padding-top: 15px;
 			padding-bottom: 15px;
 			position: relative;
@@ -61,19 +69,21 @@
             }
 			h3 {
 				padding-left: 6px;
-				font-size: 25px;
+				font-size: 26px;
                 margin: 0;
 				@extend .text-rose-gold;
                 @media(min-width: $grid-float-breakpoint){
                     font-size: 40px;
                 }
 			}
-			h3 small {
-				font-size: 55%;
+			small {
                 display: inline-block;
-                padding-left: 2px;
+                padding-left: 6px;
                 padding-bottom: 3px;
 				@extend .text-rose-gold;
+                @media(max-width: $grid-float-breakpoint-max){
+                    font-size: 12px;
+                }
 			}
 			p {
                 margin: 0;
@@ -91,6 +101,7 @@
 			.description {
 				margin-left: 100px;
 				padding-left: 50px;
+                margin-right: 0;
 				background-color: $brand-primary;
 				color: #fff;
                 @media(min-width: $grid-float-breakpoint){
@@ -108,10 +119,11 @@
 			.description {
 				margin-right: 100px;
 				padding-right: 50px;
-				margin-left: auto;
+				margin-left: 0;
 				background-color: $brand-forrest;
 				color: #fff;
                 @media(min-width: $grid-float-breakpoint){
+                    margin-left: auto;
                     margin-right: 200px;
                     padding-right: 70px;
                 }

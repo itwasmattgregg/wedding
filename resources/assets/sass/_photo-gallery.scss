@@ -4,7 +4,10 @@
 }
 .grid {
 	.grid-item {
-		width: 33%;
+		width: 50%;
+        @media(min-width: $grid-float-breakpoint){
+            width: 33%;
+        }
 		&:before {
 			content: '';
 			position: absolute;

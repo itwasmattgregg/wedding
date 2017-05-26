@@ -16,107 +16,128 @@
 					<img src="/images/wedding-party/evan.jpg" alt="Evan Larson" />
 				</div>
 				<div class="description">
-					<h3>Evan Larson <small>Best Man</small></h3>
+					<h3>Evan Larson</h3>
+                    <small>Best Man</small>
 					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/wedding-party/lara.jpg" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/lara.jpg" alt="Lara Wilder" />
 				</div>
 				<div class="description">
-					<h3>Lara Wilder <small>Maid of Honor</small></h3>
+					<h3>Lara Wilder</h3>
+                    <small>Maid of Honor</small>
 					<p>Sister of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">
 				<div class="member-img">
-					<img src="/images/wedding-party/matt.jpg" alt="Evan Larson" class="vertical-img" />
+					<img src="/images/wedding-party/matt.jpg" alt="Matt Rowley" />
 				</div>
 				<div class="description">
-					<h3>Matt Rowley <small>Groomsman</small></h3>
+					<h3>Matt Rowley</h3>
+                    <small>Groomsman</small>
 					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/wedding-party/afton.jpg" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/afton.jpg" alt="Afton Eichelman" />
 				</div>
 				<div class="description">
-					<h3>Afton Eichelman <small>Bridesmaid</small></h3>
+					<h3>Afton Eichelman</h3>
+                    <small>Bridesmaid</small>
 					<p>Friend of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">
 				<div class="member-img">
-					<img src="/images/wedding-party/DSC_3885.jpg" alt="Evan Larson" class="vertical-img" />
+					<img src="/images/wedding-party/michael.jpg" alt="Michael Sperl" />
 				</div>
 				<div class="description">
-					<h3>Evan Larson <small>Best Man</small></h3>
-					<p>Best Friend of the Groom</p>
+					<h3>Michael Sperl</h3>
+                    <small>Groomsman</small>
+					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/rachel.gif" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/michaela.jpg" alt="Michaela Sperl"  />
 				</div>
 				<div class="description">
-					<h3>Lara Wilder <small>Maid of Honor</small></h3>
-					<p>Lorem ipsum</p>
+					<h3>Michaela Sperl</h3>
+                    <small>Bridesmaid</small>
+					<p>Friend of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">
 				<div class="member-img">
-					<img src="/images/wedding-party/DSC_3885.jpg" alt="Evan Larson" class="vertical-img" />
+					<img src="/images/wedding-party/adam.jpg" alt="Adam Iverson" />
 				</div>
 				<div class="description">
-					<h3>Evan Larson <small>Best Man</small></h3>
-					<p>Best Friend of the Groom</p>
+					<h3>Adam Iverson</h3>
+                    <small>Groomsman</small>
+					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/rachel.gif" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/courtney.jpg" alt="Courtney Anderson"  />
 				</div>
 				<div class="description">
-					<h3>Lara Wilder <small>Maid of Honor</small></h3>
-					<p>Lorem ipsum</p>
+					<h3>Courtney Anderson</h3>
+                    <small>Bridesmaid</small>
+					<p>Friend of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">
 				<div class="member-img">
-					<img src="/images/wedding-party/DSC_3885.jpg" alt="Evan Larson" class="vertical-img" />
+					<img src="/images/wedding-party/joe.jpg" alt="Joseph Held" />
 				</div>
 				<div class="description">
-					<h3>Evan Larson <small>Best Man</small></h3>
-					<p>Best Friend of the Groom</p>
+					<h3>Joseph Held</h3>
+                    <small>Groomsman</small>
+					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/rachel.gif" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/kate.jpg" alt="Kate Held"  />
 				</div>
 				<div class="description">
-					<h3>Lara Wilder <small>Maid of Honor</small></h3>
-					<p>Lorem ipsum</p>
+					<h3>Kate Held</h3>
+                    <small>Bridesmaid</small>
+					<p>Friend of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">
 				<div class="member-img">
-					<img src="/images/wedding-party/DSC_3885.jpg" alt="Evan Larson" class="vertical-img" />
+					<img src="/images/wedding-party/jonny.jpg" alt="Jonny Wilder" />
 				</div>
 				<div class="description">
-					<h3>Evan Larson <small>Best Man</small></h3>
-					<p>Best Friend of the Groom</p>
+					<h3>Jonny Wilder</h3>
+                    <small>Groomsman</small>
+					<p>Friend of the Groom</p>
 				</div>
 			</div>
 			<div class="member bride">
 				<div class="member-img">
-					<img src="/images/rachel.gif" alt="Lara Wilder"  />
+					<img src="/images/wedding-party/meredith.jpg" alt="Meredith Wilder"  />
 				</div>
 				<div class="description">
-					<h3>Lara Wilder <small>Maid of Honor</small></h3>
-					<p>Lorem ipsum</p>
+					<h3>Meredith Wilder</h3>
+                    <small>Bridesmaid</small>
+					<p>Friend of the Bride</p>
+				</div>
+			</div>
+            <div class="member groom">
+				<div class="member-img">
+					<img src="/images/wedding-party/jason.jpg" alt="Jason Gregg" />
+				</div>
+				<div class="description">
+					<h3>Jason Gregg</h3>
+					<p>Brother of the Groom</p>
 				</div>
 			</div>
 		</div>

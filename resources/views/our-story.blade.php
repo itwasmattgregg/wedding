@@ -18,22 +18,8 @@
 				</div>
 			</div>
 			<section class="story">
-				<p>
-					Our love story:
-				</p>
-				<p>
-					Matt and I met through friends. This is our rehearsed line for when someone
-					asks us for our story. If they encourage us for more, we mention our long-distance
-					relationship for the first year or so. They normally look apologetic and say something
-					like “Distance is rough.” We nod and that’s the end of the short and sweet conversation
-					about our love story. As anyone who has ever been in love understands, our story is so much
-					more dynamic, profound, and exciting than that.
-				</p>
-				<p>
-					Unfortunately, I’m not much of a storyteller so these words may fall flat as you read them.
-					If there is one take away you should have from reading this sappy webpage titled
-					“Our Story,” it’s this: Matt and I are in love and we are happy. Isn’t that all you
-					really need to get excited for a wedding? Knowing the couple is in love?
+				<p class="lead text-center">
+					Our love story
 				</p>
 				<p>
 					Matt and I met playing board games in Robbinsdale, MN with our mutual friends Michaela
@@ -42,8 +28,8 @@
 					party and Matt had his arm around me all night. One of my favorite memories of us.
 				</p>
 				<p>
-					He asked me on a date that night because I let it slip that I was flying back to Maryland
-					for spring semester in a week. Within that first week, we managed a successful first date
+					He asked me on a date that night, which was crucial because I was flying back to Maryland
+					for spring semester the following week. Within that first week, we managed a successful first date
 					and two more dates to follow.
 				</p>
 				<p>
@@ -60,11 +46,11 @@
 					Some remarkable themes throughout our dating relationship include our faith, forgiveness,
 					laughter, music, and quality time spent together. We enjoy being together and it doesn’t
 					much matter what we are doing. That being said, we have developed deep appreciation for good
-					music, red wine, Broder’s Pasta Bar, Pat's Tap cheese curds, going on walks/biking, flourless
+					live music, red wine, Broder’s Pasta Bar, Pat's Tap cheese curds, going on walks/biking, flourless
 					chocolate cake, and just adventuring in general.
 				</p>
 				<p>
-					Matt asked me to marry him on February 12th, 2017. I obviously said yes. I look forward to
+					Matt asked me to marry him on February 12th, 2017. I enthusiastically said yes. I look forward to
 					becoming his wife and learning how to love him more and more.
 				</p>
 				<p>

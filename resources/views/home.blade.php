@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="logo">
-	<img src="images/logo2.png" />
+	<img src="images/logo-animated.gif" />
 	<h2 class="header-white hide-below-gfb">10.07.18</h2>
 </div>
 <div class="hero box-border-line">

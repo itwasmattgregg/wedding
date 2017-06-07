@@ -125,8 +125,8 @@
 	// layout Masonry after each image loads
 	imagesLoaded( elem, function(imgLoad) {
         // Scroll reveal plugin init
-        window.sr = ScrollReveal();
-        sr.reveal('.grid-item');
+        // window.sr = ScrollReveal();
+        // sr.reveal('.grid-item');
 
         msnry.layout();
 	} );

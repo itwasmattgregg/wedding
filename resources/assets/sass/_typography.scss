@@ -32,7 +32,11 @@ h3{
 	color: transparent;
 	-webkit-background-clip: text;
 	text-shadow: none;
+    &.gradient-reverse {
+        background-image: linear-gradient(to right,#d4ac98, #eec9b9, #fff3de);
+    }
 }
+
 .text-rose-gold-hover {
 	@extend .text-rose-gold;
 	background-image: linear-gradient(to right,darken(#fff3de, 10%), darken(#eec9b9, 10%), darken(#d4ac98, 10%));

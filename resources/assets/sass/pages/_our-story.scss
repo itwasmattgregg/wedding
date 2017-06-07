@@ -79,6 +79,10 @@
         }
     }
     .description__bride {
+        h2 {
+            @extend .text-rose-gold;
+            @extend .text-rose-gold.gradient-reverse;
+        }
         @media(max-width: $screen-xs-max){
             padding-top: 40px;
         }

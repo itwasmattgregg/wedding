@@ -23,16 +23,16 @@
     }
     &.burgundy {
         background-color: $brand-primary;
-        color: #fff;
+        color: $brand-ivory;
         h1, h2, h3 {
-            color: #fff;
+            color: $brand-ivory;
         }
     }
     &.forrest {
         background-color: $brand-forrest;
-        color: #fff;
+        color: $brand-ivory;
         h1, h2, h3 {
-            color: #fff;
+            color: $brand-ivory;
         }
     }
 }

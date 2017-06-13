@@ -11,14 +11,28 @@
     h2 {
         margin-top: 0;
     }
-    &.location {
+    &.wedding {
         background-color: $brand-taupe;
         img {
-            width: 50%;
             margin: 0 auto;
+            @media(min-width: $grid-float-breakpoint){
+                width: 50%;
+            }
+        }
+        .timeline-item:after {
+            content: "";
+            position: relative;
+            border-bottom: 1px solid #333;
+            width: 50px;
+            display: block;
+            margin: 18px auto 0;
         }
         ul {
             list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 20px;
+            }
         }
     }
     &.burgundy {
@@ -28,11 +42,7 @@
             color: $brand-ivory;
         }
     }
-    &.forrest {
-        background-color: $brand-forrest;
-        color: $brand-ivory;
-        h1, h2, h3 {
-            color: $brand-ivory;
-        }
+    &.rose-gold {
+        @include rose-gold-gradient;
     }
 }

@@ -1,0 +1,7 @@
+@mixin rose-gold-gradient() {
+    background-color: rgb(212,172,152); // Old browsers
+    background: -moz-linear-gradient(45deg, rgba(212,172,152,1) 0%, rgba(255,243,222,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(212,172,152,1) 0%,rgba(255,243,222,1) 100%);
+    background: linear-gradient(45deg, rgba(212,172,152,1) 0%,rgba(255,243,222,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4ac98', endColorstr='#fff3de',GradientType=1 );
+}

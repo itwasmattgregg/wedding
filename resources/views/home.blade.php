@@ -10,7 +10,7 @@
 <div class="hero box-border-line">
 	<div class="background-shader"></div>
 </div>
-<section class="information location">
+<section class="information wedding">
 	<div class="container text-center">
 		<h1 class="m-b-lg">
             Matthew Gregg &amp; Rachel Wilder<br>
@@ -21,13 +21,13 @@
         <br><a href="https://www.google.com/maps/dir//St+Olaf+Catholic+Church,+215+S+8th+St,+Minneapolis,+MN+55402/" target="_blank">Directions</a></p>
         <img class="img-responsive m-b-md" src="/images/other/church.jpg" />
         <h3>Schedule</h3>
-        <h4>
+        <h4 class="timeline-item">
             Ceremony - 2:00pm
         </h4>
-        <h4>
+        <h4 class="timeline-item">
             Cocktail hour - 5:00pm.
         </h4>
-        <h4>
+        <h4 class="timeline-item">
             Dinner - 6:30 pm.
         </h4>
         <h4 class="m-b-md">
@@ -55,7 +55,7 @@
         </div>
     </div>
 </section>
-<section class="information forrest">
+<section class="information burgundy">
 	<div class="container">
 		<h2>
             Parking
@@ -70,7 +70,7 @@
         </div>
 	</div>
 </section>
-<section class="information burgundy">
+<section class="information rose-gold">
 	<div class="container">
 		<h2>
             Registry

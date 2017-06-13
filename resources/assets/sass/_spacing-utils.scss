@@ -1,0 +1,72 @@
+// ## Spacing Utilities
+//
+// Adapted from http://v4-alpha.getbootstrap.com/components/utilities/#spacing
+// The format is: .{type}-{location/axis}-{size}
+// --------------------------------------------------
+
+
+// These may be overridden in _variables.scss
+//## Base
+$spacer:       $line-height-computed !default;
+$spacer-x:     $spacer !default;
+$spacer-y:     $spacer !default;
+
+//## Medium
+$spacer-md:    ($spacer * 1.5) !default;
+$spacer-x-md:  $spacer-md !default;
+$spacer-y-md:  $spacer-md !default;
+
+//## Large
+$spacer-lg:    ($spacer * 3) !default;
+$spacer-x-lg:  $spacer-lg !default;
+$spacer-y-lg:  $spacer-lg !default;
+
+$spacers: (
+  0: (
+    x:   0,
+    y:   0
+  ),
+  sm: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  md: (
+    x:   $spacer-x-md,
+    y:   $spacer-x-md
+  ),
+  lg: (
+    x:   $spacer-x-lg,
+    y:   $spacer-y-lg
+  )
+) !default;
+
+
+// Margin and Padding
+
+.m-x-auto {
+  margin-right: auto !important;
+  margin-left:  auto !important;
+}
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x:   map-get($lengths, x);
+    $length-y:   map-get($lengths, y);
+
+    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
+    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; } // t = Top
+    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; } // r = Right
+    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; } // b = Bottom
+    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; } // l = Left
+
+    // Axes
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-right:  $length-x !important;
+      #{$prop}-left:   $length-x !important;
+    }
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-top:    $length-y !important;
+      #{$prop}-bottom: $length-y !important;
+    }
+  }
+}

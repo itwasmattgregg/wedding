@@ -1,13 +1,38 @@
 .information {
-	background-color: $brand-taupe;
-    h2 {
+    text-align: center;
+    h1 {
         line-height: 1;
+        font-size: 60px;
         small {
             color: $text-color;
             font-size: 50%;
         }
     }
-    .info-box {
-        text-align: center;
+    h2 {
+        margin-top: 0;
+    }
+    &.location {
+        background-color: $brand-taupe;
+        img {
+            width: 50%;
+            margin: 0 auto;
+        }
+        ul {
+            list-style: none;
+        }
+    }
+    &.burgundy {
+        background-color: $brand-primary;
+        color: #fff;
+        h1, h2, h3 {
+            color: #fff;
+        }
+    }
+    &.forrest {
+        background-color: $brand-forrest;
+        color: #fff;
+        h1, h2, h3 {
+            color: #fff;
+        }
     }
 }

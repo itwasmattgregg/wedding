@@ -18,6 +18,7 @@
         </h1>
         <h2>The Wedding</h2>
 		<p>The Ceremony and Reception will be located at <strong>St. Olaf Catholic Church</strong> in downtown Minneapolis.
+        <br>Please dress in formal attire.
         <br><a href="https://www.google.com/maps/dir//St+Olaf+Catholic+Church,+215+S+8th+St,+Minneapolis,+MN+55402/" target="_blank">Directions</a></p>
         <img class="img-responsive m-b-md" src="/images/other/church.jpg" />
         <h3>Schedule</h3>

@@ -103,7 +103,6 @@
 				padding-left: 50px;
                 margin-right: 0;
 				background-color: $brand-primary;
-				color: #fff;
                 @media(min-width: $grid-float-breakpoint){
                     margin-left: 200px;
                     padding-left: 70px;
@@ -114,14 +113,16 @@
 			text-align: right;
 			.member-img {
 				right: 0;
-				border: 6px solid $brand-forrest;
+				border: 6px solid darken(rgb(255,243,222), 5%);
 			}
 			.description {
 				margin-right: 100px;
 				padding-right: 50px;
 				margin-left: 0;
-				background-color: $brand-forrest;
-				color: #fff;
+				@include rose-gold-gradient;
+                h3, small, p {
+                    color: $text-color;
+                }
                 @media(min-width: $grid-float-breakpoint){
                     margin-left: auto;
                     margin-right: 200px;

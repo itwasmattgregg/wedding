@@ -39,13 +39,12 @@
 				<p>
 					I moved home and started working in Minneapolis that summer. It was so wonderful being
 					able to see Matt more often and to be able to drive 20 minutes to have a conversation
-					rather than talk on the phone. We have lived near each other ever since and enjoy each
-					other’s closeness.
+					rather than talk on the phone. We have lived near each other ever since.
 				</p>
 				<p>
 					Some remarkable themes throughout our dating relationship include our faith, forgiveness,
 					laughter, music, and quality time spent together. We enjoy being together and it doesn’t
-					much matter what we are doing. That being said, we have developed deep appreciation for good
+					much matter what we are doing. We have developed a deep appreciation for good
 					live music, red wine, Broder’s Pasta Bar, Pat's Tap cheese curds, going on walks/biking, flourless
 					chocolate cake, and just adventuring in general.
 				</p>
@@ -54,7 +53,7 @@
 					becoming his wife and learning how to love him more and more.
 				</p>
 				<p>
-					I firmly believe that every strong married couple is well-supported in prayer and love from
+					I believe that every strong married couple is well-supported in prayer and love from
 					family and friends. Matt and I are so grateful for all the love we receive from you all. We
 					would be grateful for all the prayers you can spare as we continue our engagement and as we
 					learn how to be a graceful bride and bridegroom for the rest of our lives :)

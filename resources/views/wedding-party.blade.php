@@ -118,7 +118,7 @@
 				<div class="description">
 					<h3>Jonny Wilder</h3>
                     <small>Groomsman</small>
-					<p>Friend of the Groom</p>
+					<p>Brother of the Bride</p>
 				</div>
 			</div>
 			<div class="member bride">
@@ -128,7 +128,7 @@
 				<div class="description">
 					<h3>Meredith Wilder</h3>
                     <small>Bridesmaid</small>
-					<p>Friend of the Bride</p>
+					<p>Sister-in-law of the Bride</p>
 				</div>
 			</div>
             <div class="member groom">

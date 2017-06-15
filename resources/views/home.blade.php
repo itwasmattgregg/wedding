@@ -102,7 +102,7 @@
             </address>
 
             <address>
-                <strong>Kimpton Grand Hotel Minneapolis</strong><br>
+                <a href="http://www.grandhotelminneapolis.com/" target="_blank"><strong>Kimpton Grand Hotel Minneapolis</strong></a><br>
 
                 615 2nd Avenue S<br>
 

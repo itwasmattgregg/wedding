@@ -30,7 +30,7 @@
 		}
 	}
 	.home & {
-		background-image: url('/images/IMG_1903.jpg');
+		background-image: url('/images/IMG_1868.jpg');
 		&:after {
 			content: "";
 			position: absolute;
@@ -43,7 +43,7 @@
 			background-position: center right;
 
 			@media(min-width: $grid-float-breakpoint) {
-				background-image: url('/images/IMG_1903_front.png');
+				background-image: url('/images/IMG_1868_front.png');
 			}
 		}
 	}

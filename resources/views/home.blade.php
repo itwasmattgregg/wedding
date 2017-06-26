@@ -41,7 +41,7 @@
             Ideas <i class="glyphicon glyphicon-menu-down"></i>
         </button>
         <div class="collapse" id="collapseExample">
-            <div class="">
+            <div style="padding-bottom: 20px;">
                 <ul>
                     <li>Grab a treat at Hen House Eatery, which is right across the street from St. Olaf.</li>
                     <li>Share a drink with friends at the Living Room bar in the Foshay Tower.</li>
@@ -54,7 +54,6 @@
                 </ul>
             </div>
         </div>
-        <p>If you have any questions please email us at </p>
     </div>
 </section>
 <section class="information burgundy">
@@ -93,14 +92,6 @@
             <p>
                 We have reserved blocks of rooms at these hotels for a discounted rate:
             </p>
-            <address>
-                <strong>Hilton Garden Inn</strong><br>
-
-                1601 East American Blvd<br>
-
-                Bloomington, MN 55425<br>
-                <em>(This hotel is closest to the Minneapolis/St. Paul Airport.)</em>
-            </address>
 
             <address>
                 <a href="http://www.grandhotelminneapolis.com/" target="_blank"><strong>Kimpton Grand Hotel Minneapolis</strong></a><br>
@@ -108,13 +99,28 @@
                 615 2nd Avenue S<br>
 
                 Minneapolis, MN 55402<br>
-                <em>(This hotel is located two blocks from the ceremony/reception location. The Bride and Groom will be staying at this hotel Saturday night. Great location in the center of downtown Minneapolis!)</em>
+                <em>(This hotel is located two blocks from the ceremony/reception location. The Bride and Groom will be staying at this hotel Saturday night. Great location in the center of downtown Minneapolis!)</em> <br>
+                <strong>Wedding Party Discount Code: WILGRE1007</strong>
             </address>
+
+            <address>
+                <a href="http://hiltongardeninn3.hilton.com/en/hotels/minnesota/hilton-garden-inn-minneapolis-airport-mall-of-america-MSPMLGI/index.html" target="_blank"><strong>Hilton Garden Inn</strong></a><br>
+
+                1601 East American Blvd<br>
+
+                Bloomington, MN 55425<br>
+                <em>(This hotel is closest to the Minneapolis/St. Paul Airport.)</em><br>
+                <strong>Wedding Party Discount Code: WEDWG</strong>
+            </address>
+
+
 
             <p>
                 We encourage you to look at other options via airbnb or other hotels if you prefer.
             </p>
 		</div>
+        <p class="m-t-lg">If you have any questions please email us:<br><br> <a href="mailto:mattdgregg@gmail.com" class="btn btn-primary">Email Matt</a> or <a href="mailto:rtwilder311@gmail.com" class="btn btn-primary">Email Rachel</a></p>
+
 	</div>
 </section>
 

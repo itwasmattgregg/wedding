@@ -5,7 +5,7 @@
 @section('content')
 <div class="logo">
 	<img src="images/logo-animated.gif" alt="Matt &amp; Rachel's Wedding"/>
-	<h2 class="header-white hide-below-gfb">10.07.18</h2>
+	<h2 class="header-white hide-below-gfb">10.07.17</h2>
 </div>
 <div class="hero box-border-line">
 	<div class="background-shader"></div>
@@ -54,6 +54,7 @@
                 </ul>
             </div>
         </div>
+        <p>If you have any questions please email us at </p>
     </div>
 </section>
 <section class="information burgundy">

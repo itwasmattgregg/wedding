@@ -45,4 +45,8 @@
     &.rose-gold {
         @include rose-gold-gradient;
     }
+    address {
+        max-width: 600px;
+        margin: 25px auto;
+    }
 }

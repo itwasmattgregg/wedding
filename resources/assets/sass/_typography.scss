@@ -35,11 +35,19 @@ h3{
     &.gradient-reverse {
         background-image: linear-gradient(to right,#d4ac98, #eec9b9, #fff3de);
     }
+    .no-backgroundcliptext & {
+        background-image: none;
+        color: $brand-ivory;
+    }
 }
 
 .text-rose-gold-hover {
 	@extend .text-rose-gold;
 	background-image: linear-gradient(to right,darken(#fff3de, 10%), darken(#eec9b9, 10%), darken(#d4ac98, 10%));
+    .no-backgroundcliptext & {
+        background-image: none;
+        color: $brand-ivory;
+    }
 }
 
 .header-white {

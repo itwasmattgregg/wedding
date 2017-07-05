@@ -77,7 +77,25 @@
             Registry
         </h2>
 		<div class="row">
-            We are registering at Crate & Barrel, Amazon, and Target. Links will be up shortly.
+            <p>Our registries can be found by clicking the links below.</p>
+            <div class="col-md-4">
+                <a href="https://www.crateandbarrel.com/gift-registry/matt-gregg-and-rachel-wilder/r5710772"
+                   target="_blank">
+                   <img src="https://s3.us-east-2.amazonaws.com/rachelmattwedding.com/Crate+and+Barrel+Logo.png" height="200" alt="Crate & Barrel" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.amazon.com/wedding/matt-gregg-rachel-wilder-minneapolis-october-2017/registry/3A94ZKAHX62U0"
+                    target="_blank">
+                    <img src="https://www.seeklogo.net/wp-content/uploads/2016/10/amazon-logo-preview.png" width="200" alt="Amazon" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.target.com/gift-registry/giftgiver?registryId=15f849f9d0124c3e804b0dc52b8ab728"
+                    target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Target_logo.svg/2000px-Target_logo.svg.png" height="200" alt="Target" />
+                </a>
+            </div>
 		</div>
 	</div>
 </section>

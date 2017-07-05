@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./modernizer-custom');
 
 window.Vue = require('vue');
 

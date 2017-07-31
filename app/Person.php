@@ -8,4 +8,8 @@ use Laravel\Scout\Searchable;
 class Person extends Model
 {
     use Searchable;
+
+    protected $fillable = [
+        'first_guest', 'second_guest', 'email', 'rsvp', 'special', 'extra_people'
+    ];
 }

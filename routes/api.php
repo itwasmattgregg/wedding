@@ -20,3 +20,12 @@ Route::get('/search', [
     'as' => 'api.search',
     'uses' => 'ApiSearchController@search'
 ]);
+Route::get('/person/{id}', function($id) {
+    return App\Person::findOrFail($id);
+});
+Route::patch('/person/{id}', function(Request $request, $id) {
+    App\Person::findOrFail($id)->update([
+        'first_name' => $request->input(['first_name']),
+        'last_name' => $request->input(['last_name']),
+    ]);
+});

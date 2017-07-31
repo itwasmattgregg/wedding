@@ -20,9 +20,6 @@ Auth::routes();
 Route::get('/our-story', function () {
     return view('our-story');
 })->name('our-story');
-Route::get('/search', function () {
-    return view('search');
-})->name('search');
 Route::get('/wedding-party', function () {
     return view('wedding-party');
 })->name('wedding-party');

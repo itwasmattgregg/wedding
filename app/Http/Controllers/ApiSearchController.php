@@ -21,11 +21,9 @@ class ApiSearchController extends Controller {
         // Making sure the user entered a keyword.
         if($request->has('q')) {
 
-            // Using the Laravel Scout syntax to search the products table.
-            $posts = Person::search($request->get('q'))->get();
+            $people = Person::search($request->get('q'))->get();
 
-            // If there are results return them, if none, return the error message.
-            return $posts->count() ? $posts : $error;
+            return $people->count() ? $people : $error;
 
         }
 

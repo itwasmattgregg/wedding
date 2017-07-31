@@ -15,13 +15,11 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('first_name_plus');
-            $table->string('last_name_plus');
+            $table->string('first_guest');
+            $table->string('second_guest');
             $table->string('email');
+            $table->json('extra_people')->nullable();
             $table->boolean('rsvp')->nullable();
-            $table->integer('party_size');
             $table->text('special')->nullable();
             $table->timestamps();
         });

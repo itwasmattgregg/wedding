@@ -29,6 +29,7 @@
     <!-- Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rochester" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/floating-labels.css" rel="stylesheets">
 
     <!-- Scripts -->
     <script>
@@ -84,8 +85,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.1/vue-resource.min.js"></script>
     <script src="/js/app.js"></script>
 
 	@yield('page_scripts')

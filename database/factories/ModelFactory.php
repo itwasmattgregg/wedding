@@ -26,11 +26,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Person::class, function (Faker\Generator $faker) {
     return [
-        'first_name' => $faker->firstName,
-        'last_name' => $faker->lastName,
-        'first_name_plus' => $faker->firstName,
-        'last_name_plus' => $faker->lastName,
+        'first_guest' => $faker->name,
+        'second_guest' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'party_size' => $faker->numberBetween(1, 5),
     ];
 });

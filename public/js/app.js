@@ -2072,6 +2072,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2083,6 +2097,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$http.get('/api/person/' + storedPerson).then(function (response) {
                 response.body.error ? _this.error = response.body.error : _this.person = response.body;
                 _this.detailView = true;
+                if (_this.person.rsvp != null) {
+                    _this.responded = true;
+                }
             });
         }
 
@@ -2097,12 +2114,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             loading: false,
             loadingDetail: false,
             error: false,
+            responded: false,
+            submitSuccess: false,
+            submitError: false,
             query: '',
             detailView: false,
-            person: {
-                rsvp: '',
-                extra_people: []
-            }
+            person: {}
         };
     },
     methods: {
@@ -2155,13 +2172,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (this.person.extra_people == null) {
                 this.person.extra_people = [{ name: '' }];
             } else {
-                console.log(this.person.extra_people);
                 this.person.extra_people.push({ name: '' });
             }
         },
         submit: function submit() {
-            console.log(this.person);
-            // this.$http.patch('api/person/' + person.id, this.person);
+            var _this4 = this;
+
+            this.submitSuccess = true;
+            this.$http.patch('api/person/' + this.person.id, this.person).then(function (response) {
+                if (response.body.error) {
+                    _this4.submitSuccess = false;
+                    _this4.submitError = true;
+                } else {
+                    _this4.submitError = false;
+                    setTimeout(function () {
+                        _this4.submitSuccess = false;
+                    }, 1000);
+                }
+            });
         }
     }
 });
@@ -4719,14 +4747,14 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)();
-exports.push([module.i, "\n.fade-enter-active {\n    transition: opacity 1s\n}\n.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {\n    opacity: 0\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active {\n    transition: opacity 1s\n}\n.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {\n    opacity: 0\n}\n.modal-footer .btn .success {\n    background-color: #5cb85c;\n}\n", ""]);
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)();
-exports.push([module.i, "\n.item button[data-v-36400437] {\n    border-radius: 0;\n    width: 100%;\n    padding: 10px 5px;\n    background-color: #fff;\n    text-align: left;\n    border-bottom: 1px solid #AD9F93;\n}\n.item button[data-v-36400437]:hover {\n    color: #64313E;\n}\n\n", ""]);
+exports.push([module.i, "\n.item button[data-v-36400437] {\n    border-radius: 0;\n    width: 100%;\n    padding: 10px 5px;\n    background-color: #fff;\n    text-align: left;\n    border-bottom: 1px solid #AD9F93;\n}\n.item button[data-v-36400437]:hover {\n    color: #64313E;\n}\n.modal-footer .btn-success[data-v-36400437] {\n    width: 136.92px;\n}\n\n\n", ""]);
 
 /***/ }),
 /* 36 */
@@ -32386,7 +32414,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "modal-content"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "modal-header"
+  }, [_vm._m(0), _vm._v(" "), _c('h4', {
+    staticClass: "modal-title",
+    attrs: {
+      "id": "rsvpModalLabel"
+    }
+  }, [_vm._v("RSVP"), _c('br'), _c('small', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.detailView),
+      expression: "detailView"
+    }]
+  }, [_vm._v("Update any information and click save at the bottom.")])])]), _vm._v(" "), _c('div', {
     staticClass: "modal-body"
   }, [(!_vm.detailView) ? [_c('form', {
     attrs: {
@@ -32420,7 +32462,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "text",
       "id": "name-search",
-      "placeholder": "Search for your name?"
+      "placeholder": "Enter your name here..."
     },
     domProps: {
       "value": (_vm.query)
@@ -32506,7 +32548,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.person.first_guest = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _c('div', {
+  })])]), _vm._v(" "), (_vm.person.second_guest != null) ? [_c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "form-group floating-label-form-group col-sm-12"
@@ -32536,7 +32578,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.person.second_guest = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _vm._l((_vm.person.extra_people), function(extra, key) {
+  })])])] : _vm._e(), _vm._v(" "), (_vm.person.extra_people != null) ? [_vm._l((_vm.person.extra_people), function(extra, key) {
     return _c('div', {
       key: extra.id,
       staticClass: "extra"
@@ -32581,7 +32623,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.addAnother()
       }
     }
-  }, [_vm._v("Add another guest?")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Add another guest?")])])] : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "form-group floating-label-form-group col-sm-6"
@@ -32589,7 +32631,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "email"
     }
-  }, [_vm._v("Update Email?")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("Contact Email")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -32617,7 +32659,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "rsvp-response"
     }
-  }, [_vm._v("Response")]), _vm._v(" "), _c('select', {
+  }, [_vm._v("*Response")]), _vm._v(" "), _c('select', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -32629,7 +32671,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "rsvp-response"
     },
     on: {
-      "change": function($event) {
+      "change": [function($event) {
         var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
           return o.selected
         }).map(function(o) {
@@ -32637,7 +32679,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           return val
         });
         _vm.person.rsvp = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-      }
+      }, function($event) {
+        _vm.responded = true
+      }]
     }
   }, [_c('option', {
     attrs: {
@@ -32662,7 +32706,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "notes"
     }
-  }, [_vm._v("Notes")]), _vm._v(" "), _c('textarea', {
+  }, [_vm._v("Special Considerations")]), _vm._v(" "), _c('textarea', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -32672,7 +32716,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "form-control",
     attrs: {
       "id": "notes",
-      "placeholder": "Any special considerations?"
+      "placeholder": "Any special considerations or notes for us?"
     },
     domProps: {
       "value": (_vm.person.special)
@@ -32703,20 +32747,49 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "data-dismiss": "modal"
     }
   }, [_vm._v("Cancel")]), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (!_vm.submitSuccess && !_vm.submitError),
+      expression: "!submitSuccess && !submitError"
+    }],
     staticClass: "btn btn-primary",
     attrs: {
-      "type": "button"
+      "type": "button",
+      "disabled": !_vm.responded
     },
     on: {
       "click": function($event) {
         _vm.submit()
       }
     }
-  }, [_vm._v("Save changes")])]) : _vm._e()])], 1)])])
+  }, [_vm._v("Save changes")]), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.submitSuccess),
+      expression: "submitSuccess"
+    }],
+    staticClass: "btn btn-success",
+    attrs: {
+      "type": "button",
+      "disabled": ""
+    }
+  }, [_vm._v("Saved!")]), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.submitError),
+      expression: "submitError"
+    }],
+    staticClass: "btn btn-error",
+    attrs: {
+      "type": "button",
+      "disabled": ""
+    }
+  }, [_vm._v("Something Went Wrong, Try Again")])]) : _vm._e()])], 1)])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "modal-header"
-  }, [_c('button', {
+  return _c('button', {
     staticClass: "close",
     attrs: {
       "type": "button",
@@ -32727,12 +32800,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }, [_vm._v("×")])]), _vm._v(" "), _c('h4', {
-    staticClass: "modal-title",
-    attrs: {
-      "id": "rsvpModalLabel"
-    }
-  }, [_vm._v("RSVP")])])
+  }, [_vm._v("×")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

@@ -11,6 +11,11 @@
         color: #64313E;
     }
 
+    .modal-footer .btn-success {
+        width: 136.92px;
+    }
+
+
 </style>
 <style>
     .fade-enter-active {
@@ -18,6 +23,9 @@
     }
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
         opacity: 0
+    }
+    .modal-footer .btn .success {
+        background-color: #5cb85c;
     }
 </style>
 
@@ -27,7 +35,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="rsvpModalLabel">RSVP</h4>
+                <h4 class="modal-title" id="rsvpModalLabel">RSVP<br><small v-show="detailView">Update any information and click save at the bottom.</small></h4>
             </div>
             <div class="modal-body">
                 <template v-if="!detailView">
@@ -36,7 +44,7 @@
                             <div class="input-group input-group-md">
                                 <div class="icon-addon addon-md">
                                     <label class="sr-only" for="name-search">Search your name</label>
-                                    <input type="text" id="name-search" placeholder="Search for your name?" class="form-control" v-model="query">
+                                    <input type="text" id="name-search" placeholder="Enter your name here..." class="form-control" v-model="query">
                                 </div>
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button" @click="search()" v-if="!loading">Search</button>
@@ -67,12 +75,15 @@
                                 <input id="first-guest" type="text" class="form-control" placeholder="Name" v-model="person.first_guest">
                             </div>
                         </div>
+                        <template v-if="person.second_guest != null">
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
                                 <label for="second-guest">Second Guest</label>
                                 <input id="second-guest" type="text" class="form-control" placeholder="Name" v-model="person.second_guest">
                             </div>
                         </div>
+                        </template>
+                        <template v-if="person.extra_people != null">
                         <div class="extra" v-for="(extra, key) in person.extra_people" :key="extra.id" >
                             <div class="form-group">
                                 <label :for="'guest-' + key + 1">Extra Guest #{{ key + 1 }}</label>
@@ -82,14 +93,15 @@
                         <div class="m-y-sm">
                             <button type="button" class="btn btn-default" @click="addAnother()">Add another guest?</button>
                         </div>
+                        </template>
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-6">
-                                <label for="email">Update Email?</label>
+                                <label for="email">Contact Email</label>
                                 <input id="email" type="text" class="form-control" placeholder="Email" v-model="person.email">
                             </div>
                             <div class="form-group floating-label-form-group col-sm-6">
-                                <label for="rsvp-response">Response</label>
-                                <select id="rsvp-response" class="form-control" v-model="person.rsvp">
+                                <label for="rsvp-response">*Response</label>
+                                <select id="rsvp-response" class="form-control" @change="responded = true" v-model="person.rsvp">
                                     <option disabled v-bind:value="null">Select One</option>
                                     <option v-bind:value="true">Attending</option>
                                     <option v-bind:value="false">Regretfully Decline</option>
@@ -98,8 +110,8 @@
                         </div>
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
-                                <label for="notes">Notes</label>
-                                <textarea id="notes" class="form-control" placeholder="Any special considerations?" v-model="person.special"></textarea>
+                                <label for="notes">Special Considerations</label>
+                                <textarea id="notes" class="form-control" placeholder="Any special considerations or notes for us?" v-model="person.special"></textarea>
                             </div>
                         </div>
                     </form>
@@ -109,7 +121,9 @@
                 <div class="modal-footer" v-if="detailView && !loadingDetail">
                     <button class="btn-link btn pull-left" @click="cancel()">Not you?</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" @click="submit()">Save changes</button>
+                    <button type="button" class="btn btn-primary" @click="submit()" :disabled="!responded" v-show="!submitSuccess && !submitError">Save changes</button>
+                    <button type="button" class="btn btn-success" disabled v-show="submitSuccess">Saved!</button>
+                    <button type="button" class="btn btn-error" disabled v-show="submitError">Something Went Wrong, Try Again</button>
                 </div>
             </transition>
             </div>
@@ -126,6 +140,9 @@
                 this.$http.get('/api/person/' + storedPerson).then((response) => {
                     response.body.error ? this.error = response.body.error : this.person = response.body;
                     this.detailView = true;
+                    if(this.person.rsvp != null) {
+                        this.responded = true;
+                    }
                 })
             }
 
@@ -139,12 +156,12 @@
                 loading: false,
                 loadingDetail: false,
                 error: false,
+                responded: false,
+                submitSuccess: false,
+                submitError: false,
                 query: '',
                 detailView: false,
-                person: {
-                    rsvp: '',
-                    extra_people: [],
-                },
+                person: {},
             }
         },
         methods: {
@@ -194,13 +211,22 @@
                 if(this.person.extra_people == null){
                     this.person.extra_people = [{name: ''}];
                 } else {
-                    console.log(this.person.extra_people);
                     this.person.extra_people.push({name: ''});
                 }
             },
             submit: function () {
-                console.log(this.person);
-                // this.$http.patch('api/person/' + person.id, this.person);
+                this.submitSuccess = true;
+                this.$http.patch('api/person/' + this.person.id, this.person).then((response) => {
+                    if(response.body.error) {
+                        this.submitSuccess = false;
+                        this.submitError = true;
+                    } else {
+                        this.submitError = false;
+                        setTimeout(() => {
+                            this.submitSuccess = false;
+                        }, 1000);
+                    }
+                });
             }
         }
     }

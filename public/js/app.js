@@ -32734,7 +32734,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [(_vm.detailView && !_vm.loadingDetail) ? _c('div', {
     staticClass: "modal-footer"
   }, [_c('button', {
-    staticClass: "btn-link btn pull-left",
+    staticClass: "btn-link btn pull-left text-taupe",
     on: {
       "click": function($event) {
         _vm.cancel()
@@ -32746,7 +32746,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "data-dismiss": "modal"
     }
-  }, [_vm._v("Cancel")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("Close")]), _vm._v(" "), _c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",

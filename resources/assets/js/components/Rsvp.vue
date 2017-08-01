@@ -119,8 +119,8 @@
             </div>
             <transition name="fade">
                 <div class="modal-footer" v-if="detailView && !loadingDetail">
-                    <button class="btn-link btn pull-left" @click="cancel()">Not you?</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn-link btn pull-left text-taupe" @click="cancel()">Not you?</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" @click="submit()" :disabled="!responded" v-show="!submitSuccess && !submitError">Save changes</button>
                     <button type="button" class="btn btn-success" disabled v-show="submitSuccess">Saved!</button>
                     <button type="button" class="btn btn-error" disabled v-show="submitError">Something Went Wrong, Try Again</button>

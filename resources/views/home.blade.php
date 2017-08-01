@@ -144,10 +144,5 @@
 
 	</div>
 </section>
-<rsvp></rsvp>
 
-@endsection
-
-@section('page_scripts')
-<script src="/js/floating-labels.js"></script>
 @endsection

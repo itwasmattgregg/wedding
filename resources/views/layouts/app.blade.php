@@ -74,7 +74,11 @@
                         <li class="{{ Request::path() == 'photos' ? 'active' : '' }}">
                             <a href="{{ route('photos') }}">Photos</a>
                         </li>
-                    {{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
+                        <li>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rsvpModal">
+                                RSVP <i class="glyphicon glyphicon-send"></i>
+                            </button>
+                        </li>
                     </ul>
 
                 </div>
@@ -82,6 +86,7 @@
         </nav>
 
         @yield('content')
+        <rsvp></rsvp>
     </div>
 
     <!-- Scripts -->

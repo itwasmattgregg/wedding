@@ -120,7 +120,7 @@
             <transition name="fade">
                 <div class="modal-footer" v-if="detailView && !loadingDetail">
                     <div v-if="saved" class="text-left">
-                        Your RSVP has been submitted! You can close this box.
+                        <p>Your RSVP has been submitted! You can close this box.</p>
                     </div>
                     <button class="btn-link btn pull-left text-taupe" @click="cancel()">Not you?</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

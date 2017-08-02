@@ -32740,7 +32740,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "modal-footer"
   }, [(_vm.saved) ? _c('div', {
     staticClass: "text-left"
-  }, [_vm._v("\n                    Your RSVP has been submitted! You can close this box.\n                ")]) : _vm._e(), _vm._v(" "), _c('button', {
+  }, [_c('p', [_vm._v("Your RSVP has been submitted! You can close this box.")])]) : _vm._e(), _vm._v(" "), _c('button', {
     staticClass: "btn-link btn pull-left text-taupe",
     on: {
       "click": function($event) {

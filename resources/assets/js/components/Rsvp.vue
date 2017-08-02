@@ -86,7 +86,7 @@
                         <template v-if="person.extra_people != null">
                         <div class="extra" v-for="(extra, key) in person.extra_people" :key="extra.id" >
                             <div class="form-group">
-                                <label :for="'guest-' + key + 1">Extra Guest #{{ key + 1 }}</label>
+                                <label :for="'guest-' + key + 1">Extra Guest #{{ key + 1 }} (Full Name)</label>
                                 <input type="text" :id="'guest-' + key + 1" class="form-control" placeholder="Name" v-model="extra.name">
                             </div>
                         </div>

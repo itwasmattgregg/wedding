@@ -29,6 +29,7 @@
     <!-- Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rochester" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/floating-labels.css" rel="stylesheets">
 
     <!-- Scripts -->
     <script>
@@ -73,7 +74,11 @@
                         <li class="{{ Request::path() == 'photos' ? 'active' : '' }}">
                             <a href="{{ route('photos') }}">Photos</a>
                         </li>
-                    {{-- <li><a href="{{ route('registry') }}">Registry</a></li> --}}
+                        <li>
+                            <button type="button" class="btn btn-primary btn-rsvp" data-toggle="modal" data-target="#rsvpModal">
+                                RSVP <i class="glyphicon glyphicon-send"></i>
+                            </button>
+                        </li>
                     </ul>
 
                 </div>
@@ -81,10 +86,10 @@
         </nav>
 
         @yield('content')
+        <rsvp></rsvp>
     </div>
 
     <!-- Scripts -->
-
     <script src="/js/app.js"></script>
 
 	@yield('page_scripts')

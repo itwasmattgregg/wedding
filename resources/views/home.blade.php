@@ -6,6 +6,9 @@
 <div class="logo">
 	<img src="images/logo-animated.gif" alt="Matt &amp; Rachel's Wedding"/>
 	<h2 class="header-white hide-below-gfb">10.07.17</h2>
+    <button type="button" class="btn btn-primary btn-lg btn-rsvp" data-toggle="modal" data-target="#rsvpModal">
+        RSVP <i class="glyphicon glyphicon-send"></i>
+    </button>
 </div>
 <div class="hero box-border-line">
 	<div class="background-shader"></div>

@@ -44,7 +44,10 @@
 					font-weight: normal;
 				}
 			}
-		}
+        }
+        .btn {
+            display: inline-block;
+        }
 		.navbar-toggle {
 			margin-top: 0;
 			margin-bottom: 0;
@@ -82,7 +85,11 @@
 		font-size: 20px;
 		font-weight: 600;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
-	}
+    }
+    .btn {
+        padding: 11px;
+        display: none;
+    }
 	.navbar-toggle {
 		border: none;
 		margin-top: 5px;

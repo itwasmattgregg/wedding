@@ -110,7 +110,7 @@
                         </div>
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
-                                <label for="notes">Special Considerations</label>
+                                <label for="notes">Special Considerations (Food Allergies Etc.)</label>
                                 <textarea id="notes" class="form-control" placeholder="Any special considerations or notes for us?" v-model="person.special"></textarea>
                             </div>
                         </div>

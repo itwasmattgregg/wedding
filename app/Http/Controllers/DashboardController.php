@@ -15,6 +15,6 @@ class DashboardController extends Controller
      */
     public function __invoke()
     {
-        return view('dashboard', ['people' => Person::orderBy('first_guest', 'asc')->get()]);
+        return view('dashboard', ['people' => Person::orderBy('rsvp', 'asc')->orderBy('first_guest', 'asc')->get()]);
     }
 }

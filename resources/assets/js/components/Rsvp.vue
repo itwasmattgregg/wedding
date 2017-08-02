@@ -71,14 +71,14 @@
                     <form>
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
-                                <label for="first-guest">First Guest</label>
+                                <label for="first-guest">First Guest (Full Name)</label>
                                 <input id="first-guest" type="text" class="form-control" placeholder="Name" v-model="person.first_guest">
                             </div>
                         </div>
                         <template v-if="person.second_guest != null">
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
-                                <label for="second-guest">Second Guest</label>
+                                <label for="second-guest">Second Guest (Full Name)</label>
                                 <input id="second-guest" type="text" class="form-control" placeholder="Name" v-model="person.second_guest">
                             </div>
                         </div>
@@ -119,6 +119,9 @@
             </div>
             <transition name="fade">
                 <div class="modal-footer" v-if="detailView && !loadingDetail">
+                    <div v-if="saved" class="text-left">
+                        Your RSVP has been submitted! You can close this box.
+                    </div>
                     <button class="btn-link btn pull-left text-taupe" @click="cancel()">Not you?</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" @click="submit()" :disabled="!responded" v-show="!submitSuccess && !submitError">Save changes</button>
@@ -158,6 +161,7 @@
                 error: false,
                 responded: false,
                 submitSuccess: false,
+                saved: false,
                 submitError: false,
                 query: '',
                 detailView: false,
@@ -222,6 +226,7 @@
                         this.submitError = true;
                     } else {
                         this.submitError = false;
+                        this.saved = true;
                         setTimeout(() => {
                             this.submitSuccess = false;
                         }, 1000);

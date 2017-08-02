@@ -2086,6 +2086,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -2116,6 +2119,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             error: false,
             responded: false,
             submitSuccess: false,
+            saved: false,
             submitError: false,
             query: '',
             detailView: false,
@@ -2185,6 +2189,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this4.submitError = true;
                 } else {
                     _this4.submitError = false;
+                    _this4.saved = true;
                     setTimeout(function () {
                         _this4.submitSuccess = false;
                     }, 1000);
@@ -32526,7 +32531,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "first-guest"
     }
-  }, [_vm._v("First Guest")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("First Guest (Full Name)")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -32556,7 +32561,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "second-guest"
     }
-  }, [_vm._v("Second Guest")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("Second Guest (Full Name)")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -32733,7 +32738,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [(_vm.detailView && !_vm.loadingDetail) ? _c('div', {
     staticClass: "modal-footer"
-  }, [_c('button', {
+  }, [(_vm.saved) ? _c('div', {
+    staticClass: "text-left"
+  }, [_vm._v("\n                    Your RSVP has been submitted! You can close this box.\n                ")]) : _vm._e(), _vm._v(" "), _c('button', {
     staticClass: "btn-link btn pull-left text-taupe",
     on: {
       "click": function($event) {

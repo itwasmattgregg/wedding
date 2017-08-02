@@ -75,7 +75,7 @@
                             <a href="{{ route('photos') }}">Photos</a>
                         </li>
                         <li>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rsvpModal">
+                            <button type="button" class="btn btn-primary btn-rsvp" data-toggle="modal" data-target="#rsvpModal">
                                 RSVP <i class="glyphicon glyphicon-send"></i>
                             </button>
                         </li>

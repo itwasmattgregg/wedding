@@ -12,6 +12,7 @@ class Person extends Model
     protected $casts = [
         'extra_people' => 'json',
         'rsvp' => 'boolean',
+        'allow_guest' => 'boolean',
     ];
 
     protected $fillable = [

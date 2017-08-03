@@ -15,6 +15,28 @@ class DashboardController extends Controller
      */
     public function __invoke()
     {
-        return view('dashboard', ['people' => Person::orderBy('rsvp', 'asc')->orderBy('first_guest', 'asc')->get()]);
+        $attendingPeople = Person::where(['rsvp' => 1])->get();
+        $total = 0;
+
+        foreach ($attendingPeople as $attendee) {
+            if(!empty($attendee->first_guest)) {
+                $total++;
+            }
+            if(!empty($attendee->second_guest)) {
+                $total++;
+            }
+            if(!is_null($attendee->extra_people)) {
+                foreach($attendee->extra_people as $extra) {
+                    if($extra['name']) {
+                        $total++;
+                    }
+                }
+            }
+        }
+
+        return view('dashboard', [
+                'people' => Person::orderBy('rsvp', 'desc')->orderBy('first_guest', 'asc')->get(),
+                'total' => $total,
+            ]);
     }
 }

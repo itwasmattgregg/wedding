@@ -75,7 +75,7 @@
                                 <input id="first-guest" type="text" class="form-control" placeholder="Name" v-model="person.first_guest">
                             </div>
                         </div>
-                        <template v-if="person.second_guest != null">
+                        <template v-if="person.allow_guest">
                         <div class="row">
                             <div class="form-group floating-label-form-group col-sm-12">
                                 <label for="second-guest">Second Guest (Full Name)</label>

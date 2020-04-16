@@ -35,7 +35,7 @@ class DashboardController extends Controller
         }
 
         return view('dashboard', [
-                'people' => Person::orderBy('rsvp', 'desc')->orderBy('first_guest', 'asc')->get(),
+                'people' => Person::orderBy('rsvp', 'asc')->orderBy('first_guest', 'asc')->get(),
                 'total' => $total,
             ]);
     }

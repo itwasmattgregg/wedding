@@ -9,6 +9,6 @@ return [
         'single' => [
             'driver' => 'errorlog',
             'level' => 'debug',
-        ]
-    ]
-]
+        ],
+    ],
+],

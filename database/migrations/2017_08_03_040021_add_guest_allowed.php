@@ -14,7 +14,7 @@ class AddGuestAllowed extends Migration
     public function up()
     {
         Schema::table('people', function (Blueprint $table) {
-            $table->boolean('allow_guest')->after('second_guest')->default(0);
+            $table->boolean('allow_guest')->default(true);
         });
     }
 

@@ -29,5 +29,7 @@ $factory->define(App\Person::class, function (Faker\Generator $faker) {
         'first_guest' => $faker->name,
         'second_guest' => $faker->name,
         'email' => $faker->unique()->safeEmail,
+        'allow_guest' => $faker->boolean(),
+        'extra_people' => $faker->boolean() ? [] : null,
     ];
 });

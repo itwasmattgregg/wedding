@@ -16,8 +16,8 @@ class CreatePeopleTable extends Migration
         Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
             $table->string('first_guest');
-            $table->string('second_guest');
-            $table->string('email');
+            $table->string('second_guest')->nullable();
+            $table->string('email')->nullable();
             $table->json('extra_people')->nullable();
             $table->boolean('rsvp')->nullable();
             $table->text('special')->nullable();

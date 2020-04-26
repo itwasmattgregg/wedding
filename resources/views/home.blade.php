@@ -140,7 +140,7 @@
                 We encourage you to look at other options via airbnb or other hotels if you prefer.
             </p>
 		</div>
-        <p class="m-t-lg">If you have any questions please email us:<br><br> <a href="mailto:mattdgregg@gmail.com" class="btn btn-primary">Email Matt</a> or <a href="mailto:rtwilder311@gmail.com" class="btn btn-primary">Email Rachel</a></p>
+        <p class="m-t-lg">If you have any questions please email us:<br><br> <a href="#" class="btn btn-primary">Email Matt</a> or <a href="#" class="btn btn-primary">Email Rachel</a></p>
 
 	</div>
 </section>
